@@ -1,0 +1,171 @@
+/* Estilo Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+#header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px;
+    text-align: center;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+#header p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Formulário */
+#formulario-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#formulario-container h3 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+/* Pets Container */
+#lista-pets-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Lista de Pets */
+#lista-pets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    justify-content: center;
+}
+
+/* Estilo para cada pet */
+.li-pet {
+    flex: 1 1 calc(33.333% - 20px); /* Tamanho flexível: 3 itens por linha */
+    max-width: calc(33.333% - 20px);
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.li-pet:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Textos dentro dos pets */
+.pet-especie {
+    font-weight: bold;
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.pet-nome {
+    font-size: 16px;
+    color: #2ecc71;
+    margin-bottom: 5px;
+}
+
+.pet-raca {
+    font-size: 14px;
+    color: #95a5a6;
+}
+
+.botao-editar, .botao-excluir {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 8px;
+  }
+  
+  .botao-editar img, .botao-excluir img {
+    width: 20px;
+    height: 20px;
+  }
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-size: 14px;
+    width: 100%;
+}
+
+footer a {
+    text-decoration: none;
+    color: #27ae60;
+}

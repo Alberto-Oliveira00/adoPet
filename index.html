@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdoPet</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header id="header">
+        <h1>Adote um Pet</h1>
+        <p>Bem-vindo ao nosso mural de pets disponíveis para adoção! Aqui você encontra informações sobre cada animal e pode escolher seu novo amigo para levar para casa.</p>
+      </header>
+      
+      <main>
+        <section id="formulario-container">
+          <h3>Cadastro de Pet</h3>
+          <form id="form-cadastro-pet">
+
+            <input type="hidden" id="pet-id" name="id">
+
+            <label for="especie">Espécie:</label>
+            <input type="text" id="pet-especie" name="especie" placeholder="Ex: Canina, Felina" required>
+  
+            <label for="nome">Nome:</label>
+            <input type="text" id="pet-nome" name="nome" placeholder="Nome do Pet" required>
+  
+            <label for="raca">Raça:</label>
+            <input type="text" id="pet-raca" name="raca" placeholder="Raça do Pet" required>
+  
+            <button type="submit" id="btn-cadastrar">Cadastrar Pet</button>
+          </form>
+        </section>
+        
+        <section id="lista-pets-container">
+          <h3>Pets para adoção</h3>
+          <ul id="lista-pets"></ul>
+        </section>
+      </main>
+      
+      <footer>
+        <p>Desenvolvido por <a href="https://github.com/Alberto-Oliveira00" target="_blank"><strong>Alberto</strong></a>. 
+          Projeto fictício sem fins comerciais.</p>
+      </footer>
+
+    <script type="module" src="js/api.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/ui.js"></script>
+  </body>
+</html>
