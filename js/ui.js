@@ -11,11 +11,17 @@ const ui = {
 
     async renderizarPets() {
         const listaPets = document.getElementById("lista-pets")
+        const mensagemVazia = document.getElementById("mensagem-vazia")
         listaPets.innerHTML = "";
 
         try {
             const pets = await api.buscarPets()
-            pets.forEach(ui.adicionarPetNaLista)
+            if (pets.length === 0) {
+                mensagemVazia.style.display = "block"
+            } else {
+                mensagemVazia.style.display = "none"
+                pets.forEach(ui.adicionarPetNaLista)
+            }
         } catch (error) {
             console.error("Erro ao obter pets:", error);
             alert("Erro ao obter pets. Tente novamente mais tarde.");
@@ -49,9 +55,26 @@ const ui = {
         iconeEditar.alt = "Editar"
         botaoEditar.appendChild(iconeEditar)
 
+        const botaoExcluir = document.createElement("button")
+        botaoExcluir.classList.add("botao-excluir")
+        botaoExcluir.onclick = async () => {
+            try {
+                await api.excluirPet(pet.id)
+                ui.renderizarPets()
+            } catch (error) {
+                alert("Erro ao excluir Pet")
+            }
+        }
+
+        const iconeExcluir = document.createElement("img")
+        iconeExcluir.src = "assets/imagens/icone-excluir.png"
+        iconeExcluir.alt = "Excluir"
+        botaoExcluir.appendChild(iconeExcluir)
+
         const icones = document.createElement("div")
         icones.classList.add("icones")
         icones.appendChild(botaoEditar)
+        icones.appendChild(botaoExcluir)
 
         li.appendChild(nomePet);
         li.appendChild(especiePet);

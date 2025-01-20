@@ -19,11 +19,12 @@
 
             <input type="hidden" id="pet-id" name="id">
 
-            <label for="especie">Espécie:</label>
-            <input type="text" id="pet-especie" name="especie" placeholder="Ex: Canina, Felina" required>
-  
             <label for="nome">Nome:</label>
             <input type="text" id="pet-nome" name="nome" placeholder="Nome do Pet" required>
+
+            <label for="especie">Espécie:</label>
+            <input type="text" id="pet-especie" name="especie" placeholder="Ex: Canina, Felina" required>
+            
   
             <label for="raca">Raça:</label>
             <input type="text" id="pet-raca" name="raca" placeholder="Raça do Pet" required>
@@ -34,6 +35,10 @@
         
         <section id="lista-pets-container">
           <h3>Pets para adoção</h3>
+          <div id="mensagem-vazia" class="mensagem-vazia">
+            <img src="assets/imagens/lista-vazia.png" alt="Nenhum pet disponível">
+            <p>Nenhum pet para adoção no momento</p>
+          </div>
           <ul id="lista-pets"></ul>
         </section>
       </main>

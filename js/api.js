@@ -50,6 +50,18 @@ const api = {
             throw error
         }
     },
+
+    async excluirPet(id) {
+        try {
+            const response = await fetch(`http://localhost:3001/pets/${id}`, {
+            method: "DELETE",
+            })
+        } 
+        catch {
+            alert("Erro ao excluir pet")
+            throw error
+        }
+    },
 }
 
 export default api;
