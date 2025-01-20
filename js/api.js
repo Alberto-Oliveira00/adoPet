@@ -1,7 +1,9 @@
+const URL_BASE = "http://localhost:3001"
+
 const api = {
     async buscarPets() {
         try {
-            const response = await fetch('http://localhost:3001/pets')
+            const response = await fetch(`${URL_BASE}/pets`)
             return await response.json()
         } catch (error) {
             alert('Erro ao buscar Pets')
@@ -10,7 +12,7 @@ const api = {
     },
     async salvarPet(pet) {
         try {
-            const response = await fetch('http://localhost:3001/pets', {
+            const response = await fetch(`${URL_BASE}/pets`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -26,7 +28,7 @@ const api = {
     
     async buscarPetPorId(id) {
         try {
-            const response = await fetch(`http://localhost:3001/pets/${id}`)
+            const response = await fetch(`${URL_BASE}/pets/${id}`)
             return await response.json()
         } catch {
             alert("Erro ao buscar pet")
@@ -36,7 +38,7 @@ const api = {
 
     async editarPet(pet) {
         try {
-            const response = await fetch(`http://localhost:3001/pets/${pet.id}`, {
+            const response = await fetch(`${URL_BASE}/pets/${pet.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -53,7 +55,7 @@ const api = {
 
     async excluirPet(id) {
         try {
-            const response = await fetch(`http://localhost:3001/pets/${id}`, {
+            const response = await fetch(`${URL_BASE}/pets/${id}`, {
             method: "DELETE",
             })
         } 
