@@ -7,6 +7,7 @@ const ui = {
         document.getElementById("pet-nome").value = pet.nome
         document.getElementById("pet-especie").value = pet.especie
         document.getElementById("pet-raca").value = pet.raca
+        document.getElementById("formulario-container").scrollIntoView()
      },
 
     async renderizarPets(petsFiltrados = null) {
