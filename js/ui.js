@@ -9,18 +9,25 @@ const ui = {
         document.getElementById("pet-raca").value = pet.raca
      },
 
-    async renderizarPets() {
+    async renderizarPets(petsFiltrados = null) {
         const listaPets = document.getElementById("lista-pets")
         const mensagemVazia = document.getElementById("mensagem-vazia")
         listaPets.innerHTML = "";
 
         try {
-            const pets = await api.buscarPets()
-            if (pets.length === 0) {
+            let petsParaRenderizar 
+
+            if (petsFiltrados) {
+                petsParaRenderizar = petsFiltrados
+            }else {
+                petsParaRenderizar = await api.buscarPets()
+            }
+
+            if (petsParaRenderizar.length === 0) {
                 mensagemVazia.style.display = "block"
             } else {
                 mensagemVazia.style.display = "none"
-                pets.forEach(ui.adicionarPetNaLista)
+                petsParaRenderizar.forEach(ui.adicionarPetNaLista)
             }
         } catch (error) {
             console.error("Erro ao obter pets:", error);

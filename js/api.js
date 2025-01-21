@@ -50,6 +50,21 @@ const api = {
             throw error
         }
     },
+
+    async buscarPetPorTermo(termo) {
+        try {
+            const pets = await this.buscarPets()
+            const termoEmMinusculas = termo.toLowerCase()
+    
+            const petsFiltrados = pets.filter(pet => {
+                return(pet.nome.toLowerCase().includes(termoEmMinusculas) || pet.especie.toLowerCase().includes(termoEmMinusculas) || pet.raca.toLowerCase().includes(termoEmMinusculas))
+            })
+            return petsFiltrados
+        } catch (error) {
+            alert("Erro ao buscar Pet")
+            throw error
+        }
+    }
 }
 
 export default api;

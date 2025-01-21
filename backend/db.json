@@ -1,3 +1,34 @@
 {
-  "pets": []
+  "pets": [
+    {
+      "id": "697e",
+      "nome": "Lua",
+      "especie": "Canina",
+      "raca": "Shitzu"
+    },
+    {
+      "id": "7e96",
+      "nome": "Sans",
+      "especie": "felina",
+      "raca": "Siamês"
+    },
+    {
+      "id": "29f0",
+      "nome": "Maya",
+      "especie": "Canina",
+      "raca": "Shitzu"
+    },
+    {
+      "id": "aaae",
+      "nome": "Leide",
+      "especie": "Canina",
+      "raca": "Poodle"
+    },
+    {
+      "id": "db52",
+      "nome": "Lua",
+      "especie": "Canina",
+      "raca": "Shitzu"
+    }
+  ]
 }
