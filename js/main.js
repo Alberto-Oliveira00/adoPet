@@ -1,6 +1,12 @@
 import ui from "./ui.js"
 import api from "./api.js"
 
+const regexConteudo = /^[A-Za-z\s]{2,}$/
+
+function validarConteudo(nome, especie, raca) {
+  return regexConteudo.test(nome, especie, raca)
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     ui.renderizarPets();
 
@@ -17,6 +23,11 @@ async function manipularSubmissaoFormulario(event) {
     const nome = document.getElementById("pet-nome").value;
     const especie = document.getElementById("pet-especie").value;
     const raca = document.getElementById("pet-raca").value;
+
+    if(!validarConteudo(nome, especie, raca)){ 
+      alert("É permitido apenas a inclusão de letras espaços e no mínimo 2 caracteres.")
+      return
+    }
   
     try {
       if (id) {
