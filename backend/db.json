@@ -29,36 +29,6 @@
       "nome": "Lua",
       "especie": "Canina",
       "raca": "Shitzu"
-    },
-    {
-      "id": "a2b7",
-      "nome": "Lua",
-      "especie": "felina",
-      "raca": "Shitzu"
-    },
-    {
-      "id": "efc0",
-      "nome": "A",
-      "especie": "A",
-      "raca": "A"
-    },
-    {
-      "id": "0bea",
-      "nome": "A",
-      "especie": "A",
-      "raca": "A"
-    },
-    {
-      "id": "3445",
-      "nome": "AA",
-      "especie": "AA",
-      "raca": "AA"
-    },
-    {
-      "id": "113a",
-      "nome": "AAA",
-      "especie": "AAA",
-      "raca": "AAA"
     }
   ]
 }
